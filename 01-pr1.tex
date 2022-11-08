@@ -1,0 +1,108 @@
+\section{Příklad 1}
+% Jako parametr zadejte skupinu (A-H)
+\prvniZadani{A}
+
+\subsection{Zjednodušení obvodu}
+
+\begin{figure}[h!]
+\begin{circuitikz} \draw
+
+(0,7) to[dcvsource, v_=$U_1$](0,3)
+(0,3) to[dcvsource, v_=$U_2$](0,0)
+(0,7) -- (1,7)
+(1,7) to[R ,l_=$R_1$](4,7)
+(4,7) -- (4,9)
+(4,9) to[R, l_=$R_2$, i=$I_{R2}$, v=$U_R2$](7,9)
+%(4,9) to [short,i=$I_{R2}$] (4.5,9)
+(7,9) -- (7,7)
+(4,7) to[R, *-*, l_=$R_3$](7,7)
+(4,7) -- (4,5)
+(4,5) to[R, l_=$R_4$](7,5)
+(7,7) to[R, *-*, l_=$R_5$](7,5)
+(7,7) to[R, l_=$R_6$](10,7)
+(4,7) -- (4,5)
+(7,5) to[R, *-*, l_=$R_7$](10,5)
+(10,7) to[R, l_=$R_8$](10,5)
+(10,5) -- (10,0)
+(10,0) -- (0,0)
+;
+
+\end{circuitikz}
+\centering
+\caption{Počáteční obvod}
+\end{figure}
+\clearpage
+
+
+\begin{figure}[h!]
+\begin{circuitikz} \draw
+
+(0,7) to[dcvsource, v_=$U_1$](0,3)
+(0,3) to[dcvsource, v_=$U_2$](0,0)
+(0,7) -- (1,7)
+(1,7) to[R ,l_=$R_1$](4,7)
+(4,7) to[R, *-*, l_=$R_{23}$](7,7)
+(4,7) -- (4,5)
+(4,5) to[R, l_=$R_4$](7,5)
+(7,7) to[R, *-*, l_=$R_5$](7,5)
+(7,7) to[R, l_=$R_6$](10,7)
+(4,7) -- (4,5)
+(7,5) to[R, *-*, l_=$R_7$](10,5)
+(10,7) to[R, l_=$R_8$](10,5)
+(10,5) -- (10,0)
+(10,0) -- (0,0)
+;
+
+\end{circuitikz}
+\centering
+\caption{Zjednodušení $R_2$ a $R_3$}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{circuitikz} \draw
+
+(0,7) to[dcvsource, v_=$U_1$](0,3)
+(0,3) to[dcvsource, v_=$U_2$](0,0)
+(0,7) -- (1,7)
+(1,7) to[R ,l_=$R_1$](4,7)
+(4,7) to[R, *-*, l_=$R_{23}$](7,7)
+(4,7) -- (4,5)
+(4,5) to[R, l_=$R_4$](7,5)
+(7,7) to[R, *-*, l_=$R_5$](7,5)
+(7,7) to[R, l_=$R_6$](10,7)
+(4,7) -- (4,5)
+(7,5) to[R, *-*, l_=$R_7$](10,5)
+(10,7) -- (10,0)
+(10,0) -- (0,0)
+;
+
+\end{circuitikz}
+\centering
+\caption{Zjednodušení $R_6$ a $R_8$}
+\end{figure}
+\clearpage
+
+
+\begin{figure}[h!]
+\begin{circuitikz} \draw
+
+(0,7) to[dcvsource, v_=$U_1$](0,3)
+(0,3) to[dcvsource, v_=$U_2$](0,0)
+(0,7) -- (1,7)
+(1,7) to[R ,l_=$R_1$](4,7)
+(4,7) to[R, *-, l_=$R_{23}$](7,7)
+(4,7) -- (4,5)
+(4,5) to[R, l_=$R_4$](7,5)
+(7,7) to[R, l_=$R_{10}$](10,6)
+(4,7) -- (4,5)
+(7,5) to[R, l_=$R_{20}$](10,6)
+(10,6) to[R, l_=$R_{30}$](13,6)
+(13,6) -- (13,0)
+(13,0) -- (0,0)
+;
+
+\end{circuitikz}
+\centering
+\caption{Úprava na hvězdu}
+\end{figure}
