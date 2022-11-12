@@ -7,19 +7,18 @@
 \begin{figure}[h!]
 \begin{circuitikz} \draw
 
-(0,7) to[dcvsource, v_=$U_1$](0,3)
-(0,3) to[dcvsource, v_=$U_2$](0,0)
-(0,7) -- (1,7)
-(1,7) to[R ,l_=$R_1$](4,7)
-(4,7) to[R, *-*, l_=$R_{23}$](7,7)
-(4,7) -- (4,5)
-(4,5) to[R, l_=$R_4$](7,5)
-(7,7) to[R, *-*, l_=$R_5$](7,5)
-(7,7) to[R, l_=$R_6$](10,7)
-(4,7) -- (4,5)
-(7,5) to[R, *-*, l_=$R_7$](10,5)
-(10,7) to[R, l_=$R_8$](10,5)
-(10,5) -- (10,0)
+(0,4) to[dcvsource, v_=$U_1$](0,2)
+(0,2) to[dcvsource, v_=$U_2$](0,0)
+(0,4) -- (1,4)
+(1,4) to[R ,l_=$R_1$](4,4)
+(4,4) to[R, *-*, l_=$R_{23}$](7,4)
+(4,4) -- (4,2)
+(4,2) to[R, l_=$R_4$](7,2)
+(7,4) to[R, *-*, l_=$R_5$](7,2)
+(7,4) to[R, l_=$R_6$](10,4)
+(7,2) to[R, *-*, l_=$R_7$](10,2)
+(10,4) to[R, l_=$R_8$](10,2)
+(10,2) -- (10,0)
 (10,0) -- (0,0)
 ;
 
@@ -30,7 +29,7 @@
 \begin{gather*}
     R_{23} = \frac{R_{2} \times R_{3}}{R_{2} + R_{3}}  \\
     R_{23} = \frac{650 \times 410}{650 + 410}  \\
-    R_{23} = 251.4151 \si\ohm
+    R_{23} \doteq 251.4151 \: \si\ohm
 \end{gather*}
 
 \end{figure}
@@ -38,18 +37,17 @@
 \begin{figure}[h!]
 \begin{circuitikz} \draw
 
-(0,7) to[dcvsource, v_=$U_1$](0,3)
-(0,3) to[dcvsource, v_=$U_2$](0,0)
-(0,7) -- (1,7)
-(1,7) to[R ,l_=$R_1$](4,7)
-(4,7) to[R, *-*, l_=$R_{23}$](7,7)
-(4,7) -- (4,5)
-(4,5) to[R, l_=$R_4$](7,5)
-(7,7) to[R, *-*, l_=$R_5$](7,5)
-(7,7) to[R, l_=$R_{68}$](10,7)
-(4,7) -- (4,5)
-(7,5) to[R, *-*, l_=$R_7$](10,5)
-(10,7) -- (10,0)
+(0,4) to[dcvsource, v_=$U_1$](0,2)
+(0,2) to[dcvsource, v_=$U_2$](0,0)
+(0,4) -- (1,4)
+(1,4) to[R ,l_=$R_1$](4,4)
+(4,4) to[R, *-*, l_=$R_{23}$](7,4)
+(4,4) -- (4,2)
+(4,2) to[R, l_=$R_4$](7,2)
+(7,4) to[R, *-*, l_=$R_5$](7,2)
+(7,4) to[R, l_=$R_{68}$](10,4)
+(7,2) to[R, *-*, l_=$R_7$](10,2)
+(10,4) -- (10,0)
 (10,0) -- (0,0)
 ;
 
@@ -60,7 +58,7 @@
 \begin{gather*}
     R_{68} = R_6 + R_8 \\
     R_{68} = 750 + 190 \\
-    R_{68} = 940 \si\ohm
+    R_{68} = 940 \: \si\ohm
 \end{gather*}
 
 \end{figure}
@@ -68,18 +66,18 @@
 \begin{figure}[h!]
 \begin{circuitikz} \draw
 
-(0,7) to[dcvsource, v_=$U_1$](0,3)
-(0,3) to[dcvsource, v_=$U_2$](0,0)
-(0,7) -- (1,7)
-(1,7) to[R ,l_=$R_1$](4,7)
-(4,7) to[R, *-, l_=$R_{23}$](7,7)
-(4,7) -- (4,5)
-(4,5) to[R, l_=$R_4$](7,5)
-(7,7) to[R, -*,l_=$R_{A}$](10,6)
-(4,7) -- (4,5)
-(7,5) to[R, l_=$R_{B}$](10,6)
-(10,6) to[R, l_=$R_{C}$](13,6)
-(13,6) -- (13,0)
+(0,4) to[dcvsource, v_=$U_1$](0,2)
+(0,2) to[dcvsource, v_=$U_2$](0,0)
+(0,4) -- (1,4)
+(1,4) to[R ,l_=$R_1$](4,4)
+(4,4) to[R, *-, l_=$R_{23}$](7,4)
+(4,4) -- (4,2)
+(4,2) to[R, l_=$R_4$](7,2)
+(7,4) to[R, -*,l_=$R_{A}$](10,3)
+(4,4) -- (4,2)
+(7,2) to[R, l_=$R_{B}$](10,3)
+(10,3) to[R, l_=$R_{C}$](13,3)
+(13,3) -- (13,0)
 (13,0) -- (0,0)
 ;
 
@@ -90,15 +88,15 @@
 \begin{gather*}
     R_A = \frac{R_5 \times R_{68}}{R_5+R_{68}+R_7} \\
     R_A = \frac{360 \times 940}{360+940+310} \\
-    R_A = 210.1863 \si\ohm \\
+    R_A \doteq 210.1863 \: \si\ohm \\
     \\
     R_B = \frac{R_5 \times R_7}{R_5+R_{68}+R_7} \\
     R_B = \frac{360 \times 310}{360+940+310} \\
-    R_B = 69.3168 \si\ohm \\
+    R_B \doteq 69.3168 \: \si\ohm \\
     \\
     R_C = \frac{R_7 \times R_{68}}{R_5+R_{68}+R_7} \\
     R_C = \frac{310 \times 940}{360+940+310} \\
-    R_C = 180.9938 \si\ohm \\
+    R_C \doteq 180.9938 \: \si\ohm \\
 \end{gather*}
 
 \end{figure}
@@ -106,16 +104,16 @@
 \begin{figure}[h!]
     \begin{circuitikz} \draw
     
-    (0,7) to[dcvsource, v_=$U_1$](0,3)
-    (0,3) to[dcvsource, v_=$U_2$](0,0)
-    (0,7) -- (1,7)
-    (1,7) to[R ,l_=$R_1$](4,7)
-    (4,7) to[R, *-*, l_=$R_{A23}$](7,7)
-    (4,5) to[R, l_=$R_{B4}$](7,5)
-    (4,7) -- (4,5)
-    (7,5) -- (7,7)
-    (7,7) to[R, l_=$R_{C}$](10,7)
-    (10,7) -- (10,0)
+    (0,4) to[dcvsource, v_=$U_1$](0,2)
+    (0,2) to[dcvsource, v_=$U_2$](0,0)
+    (0,4) -- (1,4)
+    (1,4) to[R ,l_=$R_1$](4,4)
+    (4,4) to[R, *-*, l_=$R_{A23}$](7,4)
+    (4,2) to[R, l_=$R_{B4}$](7,2)
+    (4,2) -- (4,4)
+    (7,2) -- (7,4)
+    (7,4) to[R, l_=$R_{C}$](10,4)
+    (10,4) -- (10,0)
     (10,0) -- (0,0)
     ;
     
@@ -126,11 +124,11 @@
 \begin{gather*}
     R_{A23} = R_A + R_{23} \\
     R_{A23} = 210.1863 + 251.4151 \\
-    R_{A23} = 461.6014 \\
+    R_{A23} \doteq 461.6014 \: \si\ohm \\
     \\
     R_{B4} = R_B + R_4 \\
     R_{B4} = 69.3168 + 130 \\
-    R_{B4} = 199.9938 \si\ohm  \\
+    R_{B4} \doteq 199.9938 \: \si\ohm  \\
 \end{gather*}
 
 \end{figure}
@@ -154,7 +152,7 @@
 \begin{gather*}
     R_{A23B4} = \frac{R_{A23} \times R_{B4}}{R_{A23} + R_{B4}}  \\
     R_{A23B4} = \frac{461.6014 \times 199.9938}{461.6014 + 199.9938}  \\
-    R_{A23B4} = 139.2077 \\
+    R_{A23B4} \doteq 139.2077 \: \si\ohm 
 \end{gather*}
 
 \end{figure}
@@ -176,27 +174,51 @@
 \begin{gather*}
     R = R_1 + R_{A23B4} + R_C \\
     R = 350 + 139.2077 + 180.9938 \\
-    R = 670.2015 \si\ohm 
+    R \doteq 670.2015 \: \si\ohm 
 \end{gather*}
 
 \end{figure}
 
 \begin{figure}[h!]
     \begin{circuitikz} \draw
-    
-    (0,4) to[dcvsource, v_=$U_1$](0,2)
+
+    (0,4) to[dcvsource, v_=$U_1$, i=$I$](0,2)
     (0,2) to[dcvsource, v_=$U_2$](0,0)
-    (0,4) to[R, l_=$R$](5,4)
+    (0,4) to[R,l_=$R$](5,4)
     (5,4) -- (5,0)
     (5,0) -- (0,0)
     ;
-    
+
 \end{circuitikz}
 \centering
 \caption{Výsledný obvod}
 
 \end{figure}
 
+\begin{figure}
+    \begin{gather*}
+        I = \frac{U}{R} \\
+        I = \frac{U_1 + U_2}{R} \\
+        I \doteq 0.2984 \: A
+    \end{gather*}
+\end{figure}
+
+
+\begin{figure}
+    \begin{gather*}
+        U_{R_1} = I \times R_1 \\
+        U_{R_1} = 0.2984 \times 350 \\
+        U_{R_1} \doteq 104.4462 \: V \\
+        \\
+        U_{R_C} = I \times R_C \\
+        U_{R_C} = 0.2984 \times 180.9938 \\
+        U_{R_C} \doteq 54.0118 \: V \\
+        \\
+        U_{AB} = I \times R_{A23B4} \\
+        U_{AB} = 0.2984 \times 139.2077 \\
+        U_{AB} \doteq 41.5420 \: V
+    \end{gather*}
+\end{figure}
 
 \clearpage
 \subsection{Řešení}
