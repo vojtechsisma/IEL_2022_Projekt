@@ -216,7 +216,86 @@
         \\
         U_{AB} = I \times R_{A23B4} \\
         U_{AB} = 0.2984 \times 139.2077 \\
-        U_{AB} \doteq 41.5420 \: V
+        U_{AB} \doteq 41.5420 \: V \\
+    \end{gather*}
+\end{figure}
+
+\begin{figure}
+    \begin{gather*}
+        I_A = \frac{U_{AB}}{R_{A23}} \\
+        I_A = \frac{41.5420}{461.6014} \\
+        I_A = 0.09 \: A \\
+        \\
+        I_B = \frac{U_{AB}}{R_{B4}} \\
+        I_B = \frac{41.5420}{199.9938} \\
+        I_B \doteq 0.2084 \: A \\
+    \end{gather*}
+\end{figure}
+
+\begin{figure}
+    \begin{gather*}
+        U_{23} = I_A \times R_{23} \\
+        U_{23} = 0.09 \times 251.4151 \\
+        U_{23} \doteq 22.6262 \: V \\
+        \\
+        U_{RA} = I_A \times R_A \\
+        U_{RA} = 0.09 \times 210.1863 \\
+        U_{RA} \doteq 18.9158 \: V \\
+        \\
+        U_{R_4} = I_B \times R_4 \\
+        U_{R_4} = 0.2084 \times 130 \\
+        U_{R_4} \doteq 27.0948 \: V \\
+        \\
+        U_{RB} = I_B \times R_B \\
+        U_{RB} = 0.2084 \times 69.3168 \\
+        U_{RB} \doteq 14.4472 \: V \\
+    \end{gather*}
+\end{figure}
+
+\begin{figure}
+    \begin{gather*}
+        U_{R_5} = U_{R_4} - U_{23} \\
+        U_{R_5} = 27.0948 - 22.6262 \\
+        U_{R_5} \doteq 4.4687 \: V \\
+        \\
+        U_{R7} = U_1 + U_2 - U_{R_1} - U_{R_4} \\
+        U_{R7} = 80 + 120 - 104.4462 - 27.0948 \\
+        U_{R7} \doteq  68.4589 \: V \\
+        \\
+        U_{R_{68}} = U_1 + U_2 - U_{R_1} - U_{23} \\
+        U_{R_{68}} = 80 + 120 - 104.4462  - 22.6262 \\
+        U_{R_{68}} \doteq 72.9276 \: V \\
+    \end{gather*}
+\end{figure}
+
+\begin{figure}[t]
+    \begin{gather*}
+        I_{68} = \frac{U_{R_{68}}}{R_{68}} \\
+        I_{68} = \frac{72.9276}{940} \\
+        I_{68} \doteq 0.0776 \: A \\
+        \\
+        U_{R_6}= I_{68} * R_6 \\
+        U_{R_6}= 0.0776 \times 750 \\
+        U_{R_6} \doteq 58.1869 \: V \\
+        \\
+        U_{R_8} = I_{68} \times R_8 \\
+        U_{R_8} = 0.0776 \times 190 \\
+        U_{R_8} \doteq 14.7407 \: V \\
+    \end{gather*}
+\end{figure}
+
+\begin{figure}[t]
+    \begin{gather*}
+        I_{R2} = \frac{U_{23}}{R_2} \\
+        I_{R2}  \frac{22.6262}{650} \\
+        I_{R2} \doteq \underline{\underline{0.0348 \: A}} \\
+    \end{gather*}
+\end{figure}
+
+\begin{figure}[t]
+    \begin{gather*}
+        U_{R2} = U_{23} \\
+        U_{R2} \doteq \underline{\underline{22.6262 \: V}} \\
     \end{gather*}
 \end{figure}
 
