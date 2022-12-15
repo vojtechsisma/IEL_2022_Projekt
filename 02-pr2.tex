@@ -1,3 +1,100 @@
 \section{Příklad 2}
 % Jako parametr zadejte skupinu (A-H)
 \druhyZadani{D}
+
+
+\begin{figure}[h!]
+    \begin{circuitikz} \draw
+    (0,0) -- (0,4)
+    (0,4) to[R ,l_=$R_1$](3,4)
+    (3,4) to[R , -* ,l_=$R_3$](3,2)
+    (3,2) to[R , -* ,l_=$R_4$](3,0)
+    (3,2) -- (5,2)
+    (5,2) to[R , -* ,l_=$R_5$](5,0)
+    (3,0) -- (5,0)
+    (0,0) to[R ,l_=$R_2$](3,0)
+    ;
+    
+    \end{circuitikz}
+    \centering
+    \caption{Zkratovaní zdroje napětí}
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{circuitikz} \draw
+    (0,0) -- (0,4)
+    (0,4) -- (3,4)
+    (3,4) to[R , -* ,l_=$R_{123}$](3,2)
+    (3,2) to[R , -* ,l_=$R_4$](3,0)
+    (3,2) -- (5,2)
+    (5,2) to[R , -* ,l_=$R_5$](5,0)
+    (3,0) -- (5,0)
+    (0,0) -- (3,0)
+    ;
+    
+    \end{circuitikz}
+    \centering
+    \caption{Zjednodušení $R_1$, $R_3$ a $R_2$}
+
+    \begin{gather*}
+        R_{123} = R_{1} + R_{2} + R_{3}  \\
+        R_{123} = 200 + 200 + 660\\
+        R_{123} = 1060 \: \si\ohm
+    \end{gather*}
+
+\end{figure}
+
+\begin{figure}[h!]
+    \begin{circuitikz} \draw
+
+    (0,0) -- (0,4)
+    (0,4) -- (3,4)
+    (3,4) to[R , -* ,l_=$R_{123}$](3,2)
+    (3,2) to[R , -* ,l_=$R_4$](3,0)
+    (3,2) to[short, -o] (5,2)
+    node[label={[font=\footnotesize]above:A}] {}
+    (3,0) to[short, -o] (5,0)
+    node[label={[font=\footnotesize]above:B}] {}
+    (0,0) -- (3,0)
+    ;
+    
+    \end{circuitikz}
+    \centering
+    \caption{Nahrazení $R_5$}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \begin{circuitikz} \draw
+    
+    
+    (2,1) to[short, -o] (0,1)
+    node[label={[font=\footnotesize]above:A}] {}
+    (2,1) to[short, *-] (2,2)
+    (2,2) to[R ,l_=$R_{123}$](4,2)
+    (4,2) to[short, -*] (4,1)
+    (2,1) to[short, *-] (2,0)
+    (2,0) to[R ,l_=$R_{4}$](4,0)
+    (4,0) to[short, -*] (4,1)
+    (4,1) to[short, -o] (6,1)
+    node[label={[font=\footnotesize]above:B}] {}
+    ;
+    
+    \end{circuitikz}
+    \centering
+    \caption{$R_{123}$ a $R_4$ paralelně}
+
+    \begin{gather*}
+        R_{i} = \frac{R_{123} \times R_{4}}{R_{123} + R_{4}} \\
+        R_{i} = \frac{1060 \times 200}{1060 + 200} \\
+        R_{i} \doteq 168.254 \: \si\ohm \\
+    \end{gather*}
+
+    \begin{gather*}
+        I_{0} = \frac{U}{R_{123} + R_{4}} \\
+        I_{0} = \frac{150}{1060 + 200} \\
+        R_{i} \doteq 168.254 \: \si\ohm \\
+    \end{gather*}
+\end{figure}
+
+\clearpage
