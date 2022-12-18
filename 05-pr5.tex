@@ -1,3 +1,22 @@
 \section{Příklad 5}
 % Jako parametr zadejte skupinu (A-H)
 \patyZadani{E}
+
+\subsection{Sestavení rovnic, zakreslení napěťových šipek}
+\begin{figure}[h!]
+    \begin{circuitikz}[american currents, european voltages]
+    \draw
+    (0,3) to[R, l^=$R$, v>=$U_R$](3,3)
+    (0,0) to[vsource, v>=$U$] (0,-3)
+    (0,-3) -- (3,-3)
+    (3,3) to[cute inductor, l^=$L$, v>=$U_L$] (3,0)
+    (3,-3) -- (3,0)
+    
+    (0,0) to[normal open switch] (0,3)
+    ;
+
+    \draw[->]   (1,0) arc(220:  -40:5mm);
+    \end{circuitikz}
+    \centering
+    \caption{Zakreslení napěťových šipek}
+\end{figure}

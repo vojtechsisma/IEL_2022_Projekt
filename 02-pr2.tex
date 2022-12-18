@@ -83,6 +83,10 @@
     \end{circuitikz}
     \centering
     \caption{$R_{123}$ a $R_4$ paralelně}
+\end{figure}
+
+\begin{figure}[h!]
+    \subsection{Výpočet $R_i$ a $U_i$}
 
     \begin{gather*}
         R_{i} = \frac{R_{123} \times R_{4}}{R_{123} + R_{4}} \\
@@ -91,9 +95,25 @@
     \end{gather*}
 
     \begin{gather*}
-        I_{0} = \frac{U}{R_{123} + R_{4}} \\
-        I_{0} = \frac{150}{1060 + 200} \\
-        R_{i} \doteq 168.254 \: \si\ohm \\
+        U_i = U \times \frac{R_4}{R_1+R_2+R_3+R_4} \\
+        U_i = 150 \times \frac{200}{200+200+660+200} \\
+        U_i \doteq 23.8095 \: V 
+    \end{gather*}
+\end{figure}
+
+\begin{figure}[h!]
+
+    \subsection{Výpočet $I_{R5}$ a $U_{R5}$}
+
+    \begin{gather*}
+        I_{R5} = \frac{U_i}{R_i+R_5} \\
+        I_{R5} = \frac{23.8095}{168.254 + 550} \\
+        I_{R5} = 0.0331 \: A
+    \end{gather*}
+    \begin{gather*}
+        U_{R5} = R_5 \times I_{R5} \\
+        U_{R5} = 550 \times 0.0331 \\
+        U_{R5} = 18.205 \: V
     \end{gather*}
 \end{figure}
 
